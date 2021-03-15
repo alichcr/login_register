@@ -1,0 +1,89 @@
+
+.form{
+    width: 50%;
+    height: 230px;
+    margin: 110px auto;
+   background: #dfe4ea;
+   border:3px solid #a4b0be;
+  
+}
+.form label{
+    float: right;
+    margin:20px 11px auto 0;
+    font-size: 18;
+}
+.form input[type=text]{
+    width: 80%;
+    margin: 20px auto 0 8px;
+    
+}
+.form input[type=password]{
+    width: 80%;
+    margin: 20px auto 0 8px;
+    
+}
+.form input[type=submit]{
+    margin: 10px;
+    padding: 5px 14px;
+    font-size: 18;
+    background: #a4b0be;
+    border: 2px solid #747d8c;
+    cursor: pointer;
+}
+.error{
+    font-size: 20;
+    width: 100%;
+    height: 10%;
+    margin-top: 8px;
+    color: #EA2027;
+}
+/***regester***/
+
+.form_register{
+    width: 60%;
+    height: auto;
+    margin-top:100px;
+    margin-left: 20%;
+    background: #dfe4ea;
+    border:3px solid #a4b0be;
+        
+}
+.error1{
+   font-size: 20;
+    width: 100%;
+    height: 8%;
+    margin-top: 8px;
+    color: #EA2027; 
+}
+.register input[type=password]{
+    float: left;
+    width: 80%;
+    margin-left: 4%; 
+    font-size: 12;
+}
+.register input[type=text]{
+    float: left;
+    width: 80%;
+    margin-left: 4%; 
+    font-size: 12;
+}
+.register input[type=email]{
+    float: left;
+    width: 80%;
+    margin-left: 4%; 
+    font-size: 12;
+}
+.register label{
+    float: right;
+    margin-right: 3%; 
+    font-size: 14;
+}
+.register input[type=submit]{
+    margin-left: 18px;
+    margin-top: 10px;
+    padding: 5px 14px;
+    font-size: 14;
+    background: #a4b0be;
+    border: 2px solid #747d8c;
+    cursor: pointer;
+}
