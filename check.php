@@ -1,40 +1,23 @@
 <?php
-include "config.php";
-include "function.php";
+
 session_start();
+include "config1.php";
+include_once 'function.php';
+
 
 #-------------------------login
 
+
 if (isset($_POST['send'])) {
+   
     if (empty($_POST['username']) || empty($_POST['password'])) {
         header("location:login.php?empty=10");
         exit();
     }
-
-    $post_password=valid_input_post($_POST['password']);
-    $post_username=valid_input_post($_POST['username']);
-    $select_password_id_for_login=mysqli_query($connection,
-        "SELECT `password`,`id` FROM `user` WHERE `user_name`='$post_username'");
-
-    $password_id_fetch=mysqli_fetch_array($select_password_id_for_login);
-    $password_check=password_verify($post_password,$password_id_fetch['password']);
-    if($password_check) {
-        $id_user=$password_id_fetch['id'];
-        $_SESSION['id.'.$post_username]=$id_user;
-
-        header("location:index.php?username=$post_username");
-    }else{
-        header("location:login.php?error=10");
-        die();
-    }
-
-
-
-    /*   chera baiad fetch array estefade conim vagti iek dade darim
-    if (mysqli_num_rows($select_password_for_login)==1){
-      die();}*/
-
-
+    $post_password = valid_input_post($_POST['password']);
+    $post_username = valid_input_post($_POST['username']);
+    $log=new data_connection;
+    $log->login($post_username, $post_password);
 }
 
 
@@ -71,10 +54,10 @@ if (isset($_POST['send1'])) {
         $password_hash = password_hash($post_password, PASSWORD_BCRYPT);
 
         $username_check = mysqli_query($connection,
-            "SELECT `user_name` FROM `user` WHERE `user_name`='$post_username'");
+            "SELECT `user_name` FROM `user` WHERE `user_name`='$post_username' or `email`='$post_email'");
 
 
-            if (mysqli_num_rows($username_check) == 1) {
+            if (mysqli_num_rows($username_check) > 0) {
                 header("location:register.php?tekrar=10");
                 die();
             }

@@ -1,17 +1,22 @@
+<?php
+include "function.php";
+session_start();
+$username=$_GET['username'];
+if (isset ($_SESSION['user'.$username])){
+
+   $id_user=$_SESSION['user'.$username];
+   var_dump($id_user);
+
+}else{
+    header("location:register.php");
+    die();
+}?>
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title></title>
-    </head>
-    <body>
-        <?php
-        // put your code here
-        ?>
-    </body>
+<body>
+<ul>
+    <li><a href="<?php echo "check.php?exit=$username"; ?>">خروج</a></li>
+    <li><a href="<?php echo "check.php?delete=$id_user"?>" > حدف کاربر </a></li>
+</ul>
+</body>
 </html>
