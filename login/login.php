@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <title>log in</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
 <p align="center"> صفحه ورود کاربر</p>
@@ -17,7 +17,7 @@
         }
 ?>
     </div>
-    <form action="check.php" method="post">
+    <form action="login_check.php" method="post">
         <label> نام کاربری</label><br>
         <input type="text" name="username" pattern="[a-zA-Z0-9]+" placeholder="username"><br>
         <label> رمز عبور</label><br>

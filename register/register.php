@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <title>sabtename</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
 
 </head>
 <body>
@@ -11,7 +11,7 @@
 <div class="form_register">
     <div class="error1" >
           <?php if(isset($_GET['user'])){
-               echo "<center>لطفا یک نام کاربری انتخاب کنید </center>";
+               echo "<center>لطفا تمام  فیلد ها را پر کنید </center>";
              }
              if (isset($_GET['pass'])){
                echo "<center>تکرار رمز عبور اشتباه است</center>";
@@ -28,7 +28,7 @@
     </div>
     <div class="register">
 
-        <form method="post" action="check.php" name="sabtenam">
+        <form method="post" action="register_check.php" name="sabtenam">
 
             <label>نام کاربری</label><br>
             <input type="text" name="username" placeholder="username" pattern="[a-zA-Z0-9]+" ><br>
