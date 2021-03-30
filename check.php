@@ -20,12 +20,7 @@ if (isset($_GET['exit'])) {
    
 
 if (isset($_GET['delete'])) {
-    
-wq
-:q
-:wq
-wq:
-:wq
+
     $id_delete=$_GET['delete'];
     $delete=new data_connection();
     $delete->deleted($id_delete);
